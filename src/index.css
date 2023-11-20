@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Sen', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+hr {
+    border: 1px solid #000000;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    background-color: #51E5FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 75%;
+    box-shadow: inset 0 0 5px 2px #000000;
+    padding: 3rem;
+    border-radius: 1rem;
+    margin: 5rem 0;
+}
+
+.seccolors {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: inset 0 0 5px 2px #000000;
+}
+
+.seccolors_ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    place-items: center;
+}
+
+.seccolors_btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px #000000;
+}
+
+.seccolors_btn:active {
+    box-shadow: inset 0 0 2px 2px #000000;
+}
+
+/* Myself */
+
+.self_div-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.self_img {
+    width: 140px;
+    height: 140px;
+}
+
+.self_h1 {
+    font-size: 30px;
+}
+
+.self_ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+span {
+    font-weight: bold;
+    font-size: 15px;
+    color: #474747ec;
+}
+
+/* contact */
+
+.contact_sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact_ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+svg {
+    color: #000000;
+    cursor: pointer;
+}
+
+.contact_btn {
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    color: #000000;
+    font-size: 15px;
+    cursor: pointer;
+    animation: dowland ease 1s infinite;
+}
+
+@keyframes dowland {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-8px)
+    }
+}
+
+/* Card */
+
+.card_ul {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+
+.card_img {
+    width: 270px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.card_a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.card_btn-one, .card_btn-two {
+    width: 20px;
+    border: none;
+    box-shadow: 0 0 5px 2px #000000;
+    margin: 0 .3rem;
+    cursor: pointer;
+}
+
+.card_btn-one:active, .card_btn-two:active {
+    box-shadow: inset 0 0 2px 2px #000000;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+
+    .card_li {
+        width: 470px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin-bottom: 1rem;
+    }
+
+    .card_img {
+        width: 370px;
+        height: 200px;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .self_div-one {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+        gap: 2rem;
+    }
+
+    .card_ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card_li {
+        width: 700px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin-bottom: 1rem;
+    }
+
+    .card_img {
+        width:700px;
+        height: 300px;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+}
