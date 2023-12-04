@@ -1,6 +1,20 @@
 
 const Contact = ({ colorSelected }) => {
 
+    const playSound = () => {
+        var sound = new Howl({
+            src: ['./audio/descarga.mpeg'],
+            html5: true
+        });
+        
+        sound.play();
+    }
+
+    const handleButton = () => {
+        playSound()
+    }
+
+
     return(
         <section className="contact_sec">
             <ul class="contact_ul">
@@ -17,7 +31,11 @@ const Contact = ({ colorSelected }) => {
 
             <div>
                 <a className="contact_a" href="../archivo/Ariel Gallardo Full Stack dev.pdf" download>
-                    <button className="contact_btn" style={{backgroundColor: colorSelected}}>Descargar!!</button>
+                    <button 
+                    className="contact_btn" 
+                    style={{backgroundColor: colorSelected}}
+                    onClick={() => handleButton()}
+                    >Descargar!!</button>
                 </a>
             </div>
         </section>

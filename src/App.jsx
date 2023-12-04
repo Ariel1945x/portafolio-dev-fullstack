@@ -1,4 +1,5 @@
 import './App.css'
+import { Howl } from 'howler'
 
 import Myself from './components/Myself'
 import Contact from './components/Contact'
@@ -16,6 +17,20 @@ function App() {
     setColorStyle(data.color)
   }
 
+  const playSound = () => {
+    var sound = new Howl({
+      src: ['./audio/audio.mpeg'],
+      html5: true
+    });
+    
+    sound.play();
+  }
+
+  const handleButton = (colorStyle) => {
+    playSound()
+    selectedColor(colorStyle)
+  }
+
   return (
     <section style={{ backgroundColor: colorStyle }} className='body' >
       <div style={{ backgroundColor: colorStyle }} className='content'>
@@ -29,7 +44,7 @@ function App() {
                     <button className='seccolors_btn' 
                     key={color.id} 
                     style={{backgroundColor: color.color}}
-                    onClick={() => selectedColor(color)}
+                    onClick={() => handleButton(color)}
                     ></button>
                   ))
                 }
