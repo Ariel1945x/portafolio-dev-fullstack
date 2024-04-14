@@ -28,6 +28,10 @@ const habilidades = {
         {
             id: 7,
             habilidad: "PostgreSQL"
+        }, 
+        {
+            id: 8,
+            habilidad: "Flutter"
         }
     ]
 }

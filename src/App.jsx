@@ -4,6 +4,7 @@ import { Howl } from 'howler'
 import Myself from './components/Myself'
 import Contact from './components/Contact'
 import Cards from './components/Cards'
+import ThreeDElement from './components/ThreeDElement'
 
 import colors from "./contentIterable/colors"
 import { useState } from "react"
@@ -58,7 +59,9 @@ function App() {
         <Cards
         colorSelected={colorStyle}
         /> <hr />
+        <ThreeDElement />
       </div>
+
     </section>
   )
 }
